@@ -1,0 +1,20 @@
+// 1. Importación de estilos (opcional)
+import './style.css';
+
+// 2. Inicialización de la lógica frontend
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('¡La app está lista!');
+
+    // Ejemplo: Interacción con el DOM
+    const button = document.getElementById('miBoton');
+    if (button) {
+        button.addEventListener('click', () => {
+            alert('Botón clickeado desde Vite!');
+        });
+    }
+
+    // Ejemplo: Consumir una API PHP
+    fetch('api/get_data.php')
+        .then(response => response.json())
+        .then(data => console.log('Datos desde PHP:', data));
+});

@@ -1,0 +1,13 @@
+# Reescritura de URL
+RewriteEngine On
+RewriteRule ^([0-9]+)$ index.php?id=$1 [L]
+
+# Evitar el listado de directorios
+Options -Indexes
+
+# Especificar el archivo de índice
+DirectoryIndex index.php index.html
+
+# Redirigir tráfico de HTTP a HTTPS (si es necesario)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
